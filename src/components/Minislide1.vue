@@ -199,15 +199,15 @@ export default {
   data() {
     return {
       list: [
-        {title:"Nutrition for healthy life", ctitle:"", text:"Be a part of an exciting journey of helping stay healthy and grow wealthy", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero1.png", mm:""},
-        {title:"Your Health And Business Success is Our Goal,",ctitle:"", text:"Nextage Organics Invites You To An Incredible Healthy And Business Journey. ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero2.png " , mm:""},
-        {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/slideempty.png", mm:""}
+        {title:"Nutrition for healthy life", ctitle:"", text:"Be a part of an exciting journey of helping stay healthy and grow wealthy", ctext:"",  im:"../images/nx_main3.jpg", hm:"../images/hero/hero1.png", mm:""},
+        {title:"Your Health And Business Success is Our Goal,",ctitle:"", text:"Nextage Organics Invites You To An Incredible Healthy And Business Journey. ", ctext:"",  im:"../images/nx_main3.jpg", hm:"../images/hero/hero2.png " , mm:""},
+        {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"../images/slide3new1.png", hm:"../images/slideempty.png", mm:""}
       ],
 
     // list1: [
-    //     {id:1, text: "Be a part of an exciting journey of helping stay healthy and grow wealthy", title: "Nutrition for healthy life", im:"./images/S1.png", hm:"./images/hero/hero1.png"},
-    //     {id:2, text: "bslide2", title: "healthy life", im:"./images/S1.png" ,hm:"./images/hero/hero2.png"},
-    //     {id:3, text: "no", title: "plain", im:"./images/hero/hero3.png", hm:"./images/hero/hero3.png" }
+    //     {id:1, text: "Be a part of an exciting journey of helping stay healthy and grow wealthy", title: "Nutrition for healthy life", im:"../images/S1.png", hm:"../images/hero/hero1.png"},
+    //     {id:2, text: "bslide2", title: "healthy life", im:"../images/S1.png" ,hm:"../images/hero/hero2.png"},
+    //     {id:3, text: "no", title: "plain", im:"../images/hero/hero3.png", hm:"../images/hero/hero3.png" }
     //   ],
       
       timer: null,
@@ -253,7 +253,7 @@ export default {
 
 
 .slidez{
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/S1.png."); */
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/S1.png."); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
