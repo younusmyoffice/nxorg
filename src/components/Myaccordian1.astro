@@ -1,0 +1,181 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen" scoped>
+  * {
+  /* padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  color: #3E474F; */
+}
+
+body {
+/* overflow: hidden; */
+}
+
+.wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 23px auto;
+  /* padding:0; */
+  
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 3px solid;
+  border-color: #71bf44;
+  user-select: none;
+  border-radius:10px;
+}
+
+label div:first-child {
+  width: 100%;
+  line-height: 45px;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.cross{
+  margin-right:15px;
+  margin-top:3px;
+}
+
+.cross:before,.cross:after {
+  content: '';
+  border-top: 2px solid #3E474F;
+  width: 15px;
+  display: block;
+  margin-top: 18px;
+  transition: 0.3s;
+}
+
+.cross:after {
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.content {
+  box-sizing: border-box;
+  font-size: 1.1em;
+  margin: 10px 10px;
+  font-family: sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height, .5s;
+}
+
+input:checked ~ .content {
+  max-height: 400px;
+  transition: max-height, 1s;
+}
+
+input:checked ~ label .cross:before {
+  transform: rotate(180deg);
+}
+
+input:checked ~ label .cross:after {
+  transform: rotate(0deg);
+}
+
+.questions{
+  margin-top:20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height, .5s;
+}
+
+.questions label{
+  border:none;
+  box-shadow: none;
+  margin:0;
+}
+
+input:checked ~ .questions {
+  max-height: 400px;
+  border-bottom:2px solid #3E474F;
+  transition: 1s;
+}
+
+  </style>
+</head>
+
+  <div class="wrapper">
+
+    <div class="wrap-1">
+      <input type="radio" id="tab-1" name="tabs">
+      <label for="tab-1"><div>Quality Products  </div><div class="cross"></div></label>
+      <div class="content">We provide excellent quality products which are formulated under guidance of amazing health experts and bring to your doorsteps a healthy nutritional supplement to enhance a healthy lifestyle.
+                            , with our intrinsic values of top-quality and care, we offer a wide range of products that vary from weight management, target nutrition and sports nutrition.</div>
+    </div>
+
+    <div class="wrap-2">
+      <input type="radio" id="tab-2" name="tabs">
+      <label for="tab-2"><div>Customer 360 Degree - All health aspects of life  </div><div class="cross"></div></label>
+      <div class="content"> <span class="tip" data-tip="Lorem ipsum dolor sit amet.">we have a varied range of products that complement your daily nutrition 360 Degree, help to maintain your overall health 360 Degree, and facilitate you to achieve your nutrition goals. </span> </div>
+    </div>
+     <div class="wrap-3">
+      <input type="radio" id="tab-3" name="tabs">
+      <label for="tab-3"><div>Clinician & Industry proven methodology  </div><div class="cross"></div></label>
+      <div class="content"><span class="tip" data-tip="Lorem ipsum dolor sit amet."> The role of clinical nutrition services is emphasized in the care of chronic diseases; the prevalence of chronic diseases continues to increase due to the living environment change, westernized dietary life and the aging population in the world. The effectiveness of clinical nutrition services in the treatment of diseases in inpatients has been demonstrated in several studies. Personalized nutrition based on ICT technology is able to provide more standardized and high-quality clinical nutrition services to the patients.</span> </div>
+    </div>
+     <div class="wrap-4">
+      <input type="radio" id="tab-4" name="tabs">
+      <label for="tab-4"><div>Professional advise making plans effective  </div><div class="cross"></div></label>
+      <div class="content"> <span class="tip" data-tip="Lorem ipsum dolor sit amet.">To implement dietary recommendations, health-care professionals must perform multiple roles, including educational, modeling, organizing, advisory, and investigative roles. Not all these professionals have the same needs for nutrition information to perform each of these roles effectively. Increasing expectations that health-care professionals will include nutritional guidance as an integral component of all primary care come at a time when both positive and negative forces are at work. The positive forces include a growing awareness of the escalating social and economic costs of preventable disease and disability, the wide scientific consensus on the nature of dietary recommendations, the increased scope and number of programs in health promotion, and growing evidence of the success of such efforts in reducing nutritionrelated risk factors for chronic disease.</span> </div>
+    </div>
+     <div class="wrap-5">
+      <input type="radio" id="tab-5" name="tabs">
+      <label for="tab-5"><div>Customer Experience tracking </div><div class="cross"></div></label>
+      <div class="content"><strong><a href="https://www.netageorg.com">Nextage Organics</a></strong>  is a global nutrition company that changes people’s lives by helping them achieve a
+                            healthy, active life and the opportunity for financial success. It sells various product lines through
+                            a large national distributor network.  </div>
+    </div>
+     <div class="wrap-6">
+      <input type="radio" id="tab-6" name="tabs">
+      <label for="tab-6"><div>Customer Success & results driven approach   </div><div class="cross"></div></label>
+      <div class="content">  
+          <span class="tip" data-tip="Lorem ipsum dolor sit amet."><strong><a href="https://www.netageorg.com">Nextage Organics</a></strong> one of the most important components to consider for your clients on their path to success. With each client, comes a different story and hopes in achieving different endeavors. Goal setting is the principal tool for helping anyone reach their full potential. The main purpose of setting a structured list of goals is to provide your clients with an anticipated future outcome. It’s sometimes hard for clients to keep motivated when they don’t have a set goal, plan, or target to where they plan to be in the future.</span> </div>
+    </div>
+     <div class="wrap-7">
+      <input type="radio" id="tab-7" name="tabs">
+      <label for="tab-7"><div>Referral Opportunity - Win-Win for all  </div><div class="cross"></div></label>
+      <div class="content"> As a dietitian in private practice, launching your business is an exciting step in your career. Perhaps you’ve transitioned away from a clinical setting, outpatient or long-term care job, and now are officially seeing clients on your own time. At some point, you may find yourself scratching your head and asking, “who’s going to refer me clients?” Building up a referral network is an important part of growing and marketing your nutrition practice. Navigating doctor referrals can be challenging and disparaging. Gaining face-time with a doctor (or anyone in their office) can be a major barrier.</div>
+    </div>
+
+
+    <!-- <div class="wrap-3">
+      <input type="radio" id="tab-3" name="tabs">
+      <label for="tab-3"><div>Heading three</div><div class="cross"></div></label>
+      <div class="questions">
+        <div class="question-wrap">
+          <input type="radio" id="question-1" name="question">
+          <label for="question-1"><div>question one</div> <div class="cross"></div></label>
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam atque, soluta doloribus distinctio saepe labore voluptates facere illum alias perferendis praesentium quia vel accusamus incidunt corporis veniam sapiente. Voluptate, quasi.
+          </div>
+        </div>
+        <div class="question-wrap">
+          <input type="radio" id="question-3" name="question">
+          <label for="question-3"><div>question two</div> <div class="cross"></div></label>
+          <div class="content">
+            Ipsam atque, soluta doloribus distinctio saepe labore voluptates facere illum alias perferendis praesentium quia vel accusamus incidunt corporis veniam sapiente. Voluptate, quasi.
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  </div>
+

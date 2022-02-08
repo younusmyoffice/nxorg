@@ -1,0 +1,80 @@
+body { 
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "mynav mynav mynav mynav"
+        "slider slider slider slider"
+        "getintouch getintouch getintouch getintouch "
+        "tes tes tes tes"
+        "nav article ads ads"
+        "footer footer footer footer";
+    grid-template-rows:  100px ;/* rows*/
+    grid-template-columns: 20% 1fr 15% 1fr;/* columns*/
+    grid-gap: 5px;
+    height: 100vh;
+    margin: 0;
+    }
+    #pageHeader {
+    grid-area: header;
+    /* background-color: #f1f1f1; */
+    padding: 15px;
+    /* text-align: center; */
+    /* font-size: 30px; */
+    /* height: 100vh; */
+    }
+    #mynav {
+    grid-area: mynav;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    }
+
+    #slider {
+    grid-area: slider;
+    padding-top: 20px;
+    width:100%
+    }
+    #getintouch{
+    grid-area: getintouch;
+    padding-top: 20px;
+    width:100%
+    }
+    #tes{
+    grid-area: tes;
+    padding-top: 20px;
+    width:100%
+    }
+
+    #pageFooter {
+    grid-area: footer;
+    }
+    #mainArticle { 
+    grid-area: article;      
+    }
+    #mainNav { 
+    grid-area: nav; 
+    }
+    #siteAds { 
+    grid-area: ads; 
+    }
+    header, footer, article, nav, div, getintouch, slider, mynav, tes{
+    padding: 0px;
+    background: greenyellow;
+
+    }
+    @media all and (max-width: 1025px) {
+    body { 
+        grid-template-areas: 
+        "header"
+        "mynav"
+        "slider"
+        "getintouch"
+        "tes"
+        "article"
+        "ads"
+        "nav"
+        "footer";
+        width: 100%;
+        grid-template-rows: 100px ;  
+        grid-template-columns: 1fr;
+    }
+    }

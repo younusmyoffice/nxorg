@@ -1,0 +1,333 @@
+ 
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+	<!-- <link rel="stylesheet" type="text/css" href="./src/styles/bmi/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/blocks/blocks.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/blocks/bootstrap.min.css"> -->
+ 
+
+
+      <style>
+            .styled-table {
+                border-collapse: collapse;
+                margin: 25px 0;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                min-width: 400px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                 border-radius: 1em;
+            }
+
+            .styled-table thead tr {
+                background-color: #71bf44;
+                color: #ffffff;
+                text-align: left;
+                border-radius: 1em;
+            }
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+            }
+
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+                background-color: #ffffff;
+            }
+
+            .styled-table tbody tr:nth-of-type(even) {
+                background-color: #f3f3f3;
+            }
+
+            .styled-table tbody tr:last-of-type {
+                border-bottom: 2px solid #009879;
+                /* background-color: #000000; */
+            }
+
+
+            .styled-table tbody tr.active-row {
+                font-weight: bold;
+                color: #009879;
+            }
+                  
+      
+      </style>
+    
+
+
+</head>
+  
+ 
+ 
+
+ <section class="nxo-block pt-0" style="background-image: url(./imgs/shapes/8.svg)">
+  <div class="bg-gray">
+    <div class="container ">
+      <div class="row-50"></div>
+      
+      <div class="row text-center justify-content-center">
+        <div class="col-8">
+          <h1><strong>Free fitness check for you</strong> Know your nutritional status  </h1>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container bg-r">
+      <div class="row-50"></div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-5">
+        <div class="row-50"></div>
+          <h2>Your Fitness Result</h2>
+                  <!-- <p class="text-large">Support, Sales, and Account Management services are currently available in English</p> -->
+          <!-- bmi code -->
+            <div class="row mt-4">
+              <div class="col">
+                    <table class="styled-table resultContainer "> 
+                        <thead>
+                            <tr>
+                                <th>Particulars</th>
+                                <th> Values</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BMI &nbsp;  <br><span class="nx_green">Body Mass Index</span></td>
+                                <td><p><span class="bmi"></span></p></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>BMR &nbsp; &nbsp; &nbsp;&nbsp;  <br><span class="nx_green">Basal Metabolic Rate</span></td>
+                                <td><p><span class="bmr"></span></p></td>
+                            </tr>
+                            <!-- <tr  >
+                                <td>Status &nbsp;&nbsp;&nbsp; <br><span class="nx_green">Current Body Condition</span></td>
+                                <td><p><span class="status"></span></p></td>
+                            </tr> -->
+                            <tr  >
+                                <td>Normal Weight &nbsp;  <br> <span class="nx_green">Healthy Weight</span></td>
+                                <td><p><span class="nweight"></span></p></td>
+                            </tr>
+                             <tr  >
+                                <td>You body condition is &nbsp;&nbsp;&nbsp; <br><span class="nx_green"></span></td>
+                                <td><p><span class="status"></span></p></td>
+                            </tr>
+                            <!-- and so on... -->
+                        </tbody>
+                    </table>
+
+                    
+              </div>
+            </div>
+         <!-- bmi -->
+ 
+          
+        </div>
+
+        <div class="col-12 col-md-6 ml-auto">
+          <div class="row-50"></div> 
+          <h2>Enter Details here</h2>
+          <div class="row-51"></div>
+            <!-- <div class="row mt-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder=" Name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Phone">
+              </div>
+            </div> -->
+
+          
+
+            <!-- <div class="row mt-4">
+              <div class="col">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+            </div> -->
+
+
+            <div class="row mt-4">
+              <div class="col">
+                <input  placeholder="Height in feet" id="heightInFeet" class="form-control" type="number" value=""><p class="u i"> </p>
+              </div>
+              <div class="col">
+                <input placeholder="inches" id="heightInInch" class="form-control" type="number" value="" max="11.99"  ><p class="u i"> </p>
+              </div>
+            </div>
+
+            
+          <div class="row mt-4">
+              <div class="col">
+                <input placeholder="Weight in Kgs" id="weight" class=" form-control" type="number" value=""><p class="u i"> </p>
+              </div>
+              
+            </div>
+            <div class="row mt-4">
+              <div class="col">
+                <input placeholder="Age" id="age" class=" form-control" type="number" value=""><p class="u i"> </p>
+              </div>
+            </div>
+            
+
+            <!-- <div class="row mt-4">
+              <div class="col">
+                <input  placeholder="female" id="fgender" class="form-control"  type="radio" name="gender" value="female"><p class="i">Female</p>
+              </div>
+              <div class="col">
+                <input  placeholder="male" id="mgender" class="form-control"  type="radio" name="gender" value="male"><p class="i">Male</p>
+              </div>
+            </div> -->
+
+            <div class="row mt-4 text-center justify-content-center">
+                <div class="col">
+                      <div class="form-check">
+                        <input placeholder="female" class="form-check-input" type="radio" name="gender" id="fgender" value="female" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Female
+                        </label>
+                      </div>
+                
+                </div>
+
+                <div class="col">
+                    <div class="form-check">
+                      <input placeholder="male" class="form-check-input" type="radio" name="gender" id="mgender" value="male">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Male
+                      </label>
+                    </div>
+                
+                </div>
+                
+            </div>
+
+            
+
+            <!-- <div class="row mt-4">
+              <div class="col">
+                <select class="i form-control" required="">
+                    <option value="">Select Department</option>
+                    <option  id="fgender" value="female" >female</option>
+                    <option id="mgender" value="male">m</option>
+                    <option value="3">Accounting</option>
+                  </select>
+              </div>
+            </div> -->
+            
+            <div class="row mt-4 text-center justify-content-center">
+              <div class="col">
+                <button type="submit" class="btn btn-primary submitButton button" value="Measure">Submit</button>
+              </div>
+            </div>
+            <div class="row-50"></div>
+
+            <!-- bmi output -->
+
+
+            
+
+            <!-- bmi output -->
+
+
+            <!-- <div class="row mt-4">
+              <div class="col">
+                    <table class="styled-table resultContainer "> 
+                        <thead>
+                            <tr>
+                                <th>Particulars</th>
+                                <th> Values</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BMI</td>
+                                <td><span class="bmi"></span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>BMR</td>
+                                <td><span class="bmr"></span></td>
+                            </tr>
+                            <tr  >
+                                <td>Status</td>
+                                <td><span class="status"></span></td>
+                            </tr>
+                            <tr  >
+                                <td>Normal Weight</td>
+                                <td><span class="nweight"></span></td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+              </div>
+            </div> -->
+
+
+
+
+            <!-- bmi output -->
+            <!-- <div class="row mt-4">
+              <div class="col resultContainer">
+                <h4>BMI:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bmi"></span></h4>
+
+                  <h4>BMR:&nbsp;<span class="bmr"></span></h4>
+
+                  <h4>Status:&nbsp;<span class="bmr"></span></h4>
+                  <h4>Normal Weight:&nbsp;<span class="nweight"></span></h4> 
+              </div>
+            </div> -->
+          
+            
+
+
+            <script type="text/javascript" src="./src/styles/bmi/script.js"></script>
+  
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="nxo-block pt-0"  >
+<div class="">
+    <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h1><strong>Fitness Chart </strong>   </h1>
+
+            <div class="row text-left pt-4">
+              <div class="col-12 col-md-6">
+                    <div class="row mt-4">
+                          <div class="col">
+                              <img  class="img-fluid rounded" height="200" src="/images/bmi/BMR.png">
+                          </div>
+                      
+                      </div>
+                      
+              </div>
+
+
+              <div class="col-12 col-md-6">
+                      <div class="row mt-4">
+                          <div class="col">
+                              <img  class="img-fluid rounded" height="200" src="/images/bmi/BMI.png">
+                          </div>
+                      
+                      </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+  
+</section>
+
+
+
+
+
