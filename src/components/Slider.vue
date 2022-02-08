@@ -210,7 +210,7 @@ export default {
       list: [
         {title:"Nutrition for healthy life", ctitle:"", text:"Be a part of an exciting journey of helping stay healthy and grow wealthy", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero1.svg", mm:"./images/slideempty.png"},
         {title:"Your Health And Business Success is Our Goal,",ctitle:"", text:"Nextage Organics Invites You To An Incredible Healthy And Business Journey. ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero2.png " , mm:"./images/slideempty.png"},
-        {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/pll.png", mm:"./images/pl.png"}
+        {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/slideempty.png", mm:"./images/slideempty.png"}
       ],
 
     // list1: [
