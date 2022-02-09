@@ -195,7 +195,7 @@
 
               <div class="row mt-4">
                 <div class="col">
-                  <input
+                  <input style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px; margin-top: 12px;"
                     v-model.number="height"
                     step="0.01"
                     placeholder="Height in feet"
@@ -210,7 +210,7 @@
 
               <div class="row mt-4">
                 <div class="col">
-                  <input
+                  <input style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px; margin-top: 12px;"
                     v-model.number="weight"
                     step="0.01"
                     placeholder="Weight in Kgs"
@@ -222,9 +222,9 @@
                   <p class="u i"></p>
                 </div>
               </div>
-              <div class="row mt-4">
+              <div class="row mt-4" >
                 <div class="col">
-                  <input
+                  <input style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px; margin-top: 12px;"
                     v-model.number="age"
                     placeholder="Age"
                     id="age"
@@ -233,6 +233,35 @@
                     required
                   />
                   <p class="u i"></p>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col">
+                  <!-- <input
+                    v-model.number="age"
+                    placeholder="Age"
+                    id="age"
+                    class="form-control"
+                    type="number"
+                    required
+                  /> -->
+                  <!-- <p class="u i"></p> -->
+                  <!-- <div class="row mt-4">
+                  <label for="cars">Choose Your Daily Activity</label> -->
+                  <select v-model="act"  id="act" class="form-control" placeholder="Daily Activity"
+                    style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px;  " required>  
+                    <option value="" disabled selected hidden>Daily Activity</option>
+                    <option value="0" id="0">Basal Metabolic Rate (BMR)</option>
+                    <option value="1" id="1">Little/No exercise</option>
+                    <option value="2" id="2">Low activity (exercise 1-3 times/week)</option>
+                    <option value="3" id="3">Active (daily exercise or intense exercise 3-4 times/week)</option>
+                    <option value="4" id="4">High activity (intense exercise 6-7 times/week)</option>
+                    <option value="5" id="5">Very high activity (very intense exercise daily, or physical job)</option>
+                  </select>
+                  <!-- </div> -->
+
+
                 </div>
               </div>
 
@@ -311,6 +340,7 @@ export default {
       gender: null,
       bmi: null,
       bmr: null,
+      act:null,
       // color:"red",
       err: null,
       msg: "",
@@ -344,7 +374,7 @@ export default {
           (this.err = "please fill all the required fields")
         );
       }
-      const { height, weight, age, gender } = this;
+      const { height, weight, age, gender, act } = this;
       var bmiv = weight / (height / 3.281) ** 2;
       this.bmi = parseFloat(bmiv).toFixed(2); //12.23
       //  male BMR = 66.47 + ( 13.75 * weight in kg ) + ( 5.003 * height in cm ) - ( 6.755 * age in years )
@@ -353,14 +383,73 @@ export default {
       //  const { height, weight, age } = this;
       if (this.gender == "male") {
         // this.bmr = 66.47 ;
-        var bmrmale =
+        if(this.act == '0'){
+          var bmrmale =
           66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age;
-        this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+          this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+        }else if(this.act == '1'){
+          var bmrmale =
+          1.2 * (66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age);
+          this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+        }
+        else if(this.act == '2'){
+          var bmrmale =
+          1.375 * (66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age);
+          this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+        }
+        else if(this.act == '3'){
+          var bmrmale =
+          1.55 * (66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age);
+          this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+        }
+        else if(this.act == '4'){
+          var bmrmale =
+          1.725 * (66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age);
+          this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+        }
+        else if(this.act == '5'){
+          var bmrmale =
+          1.9 * (66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age);
+          this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
+        }
+        // var bmrmale =
+        //   66.47 + 13.75 * weight + 5.003 * (height * 30.48) - 6.755 * age;
+        // this.bmr = parseFloat(bmrmale).toFixed(2); //12.23
       } else {
         // this.bmr = 4 ;
-        var bmrfemale =
+        if(this.act == '0'){
+          var bmrfemale =
           655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age;
-        this.bmr = parseFloat(bmrfemale).toFixed(2);
+          this.bmr = parseFloat(bmrfemale).toFixed(2);
+        }else if(this.act == '1'){
+          var bmrfemale =
+          1.2 * (655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age);
+          this.bmr = parseFloat(bmrfemale).toFixed(2); //12.23
+        }
+        else if(this.act == '2'){
+          var bmrfemale =
+          1.375 * (655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age);
+          this.bmr = parseFloat(bmrfemale).toFixed(2); //12.23
+        }
+        else if(this.act == '3'){
+          var bmrfemale =
+          1.55 * (655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age);
+          this.bmr = parseFloat(bmrfemale).toFixed(2); //12.23
+        }
+        else if(this.act == '4'){
+          var bmrfemale =
+          1.725 * (655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age);
+          this.bmr = parseFloat(bmrfemale).toFixed(2); //12.23
+        }
+        else if(this.act == '5'){
+          var bmrfemale =
+          1.9 * (655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age);
+          this.bmr = parseFloat(bmrfemale).toFixed(2); //12.23
+        }
+        
+        // var bmrfemale =
+        //   655.1 + 9.563 * weight + 1.85 * (height * 30.48) - 4.676 * age;
+        // this.bmr = parseFloat(bmrfemale).toFixed(2);
       }
       // this.bmrmale = 66.47 + ( 13.75 * weight in kg ) + ( 5.003 * height in cm ) - ( 6.755 * age in years );
       // this.bmrfemale = 655.1 + ( 9.563 * weight in kg ) + ( 1.85 * height in cm ) - ( 4.676 * age in years );
