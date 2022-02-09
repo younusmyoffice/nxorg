@@ -185,7 +185,7 @@
             <form @submit.prevent="calculate">
               <div class="row-50"></div>
               <h2>Enter Details here</h2>
-              <div class="row-51"></div>
+              <div class="row-52"></div>
               <div
                 class="static"
                 v-bind:class="{ active: isActive, 'text-danger': hasError }"
@@ -195,7 +195,7 @@
 
               <div class="row mt-4">
                 <div class="col">
-                  <input style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px; margin-top: 12px;"
+                  <input style="  border-width: 2px; border-color: #71bf44; border-radius: 5px; "
                     v-model.number="height"
                     step="0.01"
                     placeholder="Height in feet"
@@ -210,7 +210,7 @@
 
               <div class="row mt-4">
                 <div class="col">
-                  <input style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px; margin-top: 12px;"
+                  <input style="  border-width: 2px; border-color: #71bf44; border-radius: 5px; "
                     v-model.number="weight"
                     step="0.01"
                     placeholder="Weight in Kgs"
@@ -224,7 +224,7 @@
               </div>
               <div class="row mt-4" >
                 <div class="col">
-                  <input style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px; margin-top: 12px;"
+                  <input style="  border-width: 2px; border-color: #71bf44; border-radius: 5px; "
                     v-model.number="age"
                     placeholder="Age"
                     id="age"
@@ -249,9 +249,9 @@
                   <!-- <p class="u i"></p> -->
                   <!-- <div class="row mt-4">
                   <label for="cars">Choose Your Daily Activity</label> -->
-                  <select v-model="act"  id="act" class="form-control" placeholder="Daily Activity"
-                    style="width: 70%; margin: auto; border-width: 2px; border-color: #71bf44; border-radius: 5px;  " required>  
-                    <option value="" disabled selected hidden>Daily Activity</option>
+                  <select v-model="act"  id="act" class="form-control" 
+                    style="  border-width: 2px; border-color: #71bf44; border-radius: 5px;  " required>  
+                    <option value=""   disabled selected hidden >Daily Activity</option>
                     <option value="0" id="0">Basal Metabolic Rate (BMR)</option>
                     <option value="1" id="1">Little/No exercise</option>
                     <option value="2" id="2">Low activity (exercise 1-3 times/week)</option>
