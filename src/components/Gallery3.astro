@@ -10,7 +10,7 @@ div, label {
   overflow: hidden;
 }
 
-body-gallery-gallery {
+body-gal {
   top: 0;
   left: 0;
   width: 100vw;
@@ -22,29 +22,29 @@ body-gallery-gallery {
   color: white;
   background: #333;
 }
-body-gallery .message {
+body-gal .message {
   top: 1vw;
   width: 100vw;
   text-align: center;
   font-size: 1.5em;
   line-height: 2em;
 }
-body-gallery .message a {
+body-gal .message a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid #444;
 }
-body-gallery .message a:hover {
+body-gal .message a:hover {
   border-width: 3px;
 }
-body-gallery .container {
+body-gal .container-gal {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80em;
   height: 80em;
 }
-body-gallery .container [class*=item] {
+body-gal .container-gal [class*=item] {
   width: 33%;
   height: 33%;
   border: 1px solid transparent;
@@ -52,68 +52,72 @@ body-gallery .container [class*=item] {
   transition: all 0.5s ease-in-out;
   z-index: 0;
 }
-body-gallery .container [class*=item]:hover {
+body-gal .container-gal [class*=item]:hover {
   border: 1px solid white;
   z-index: 1;
 }
-body-gallery .container [class*=item]:nth-of-type(1) {
+body-gal .container-gal [class*=item]:nth-of-type(1) {
   top: 0;
   left: 0;
 }
-body-gallery .container [class*=item]:nth-of-type(2) {
+body-gal .container-gal [class*=item]:nth-of-type(2) {
   top: 0;
   left: 33%;
 }
-body-gallery .container [class*=item]:nth-of-type(3) {
+body-gal .container-gal [class*=item]:nth-of-type(3) {
   top: 0;
   left: 66%;
 }
-body-gallery .container [class*=item]:nth-of-type(4) {
+body-gal .container-gal [class*=item]:nth-of-type(4) {
   top: 33%;
   left: 0;
 }
-body-gallery .container [class*=item]:nth-of-type(5) {
+body-gal .container-gal [class*=item]:nth-of-type(5) {
   top: 33%;
   left: 33%;
 }
-body-gallery .container [class*=item]:nth-of-type(6) {
+body-gal .container-gal [class*=item]:nth-of-type(6) {
   top: 33%;
   left: 66%;
 }
-body-gallery .container [class*=item]:nth-of-type(7) {
+body-gal .container-gal [class*=item]:nth-of-type(7) {
   top: 66%;
   left: 0;
 }
-body-gallery .container [class*=item]:nth-of-type(8) {
+body-gal .container-gal [class*=item]:nth-of-type(8) {
   top: 66%;
   left: 33%;
 }
-body-gallery .container [class*=item]:nth-of-type(9) {
+body-gal .container-gal [class*=item]:nth-of-type(9) {
   top: 66%;
   left: 66%;
 }
-body-gallery .container input {
+body-gal .container-gal input {
   display: none;
 }
-body-gallery .container input:checked + [class*=item] {
+body-gal .container-gal input:checked + [class*=item] {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
 }
-
 </style>
 
 </head>
 
-<div class="body-gallery">
+
+<div class="body-gal">
+
+
+
+
 
 <div class="message">
    Interactive! Tap a picture to enlarge, tap again to close<br>
   Made by <a href="https://codepen.io/pieter-biesemans/" target="_blank" title="check out my other work">Pieter Biesemans </a>with &#9749;, &#128420; &amp; &#8986;
 </div>
-<div class="container">
+<div class="container-gal">
   <input id="item1" type="checkbox"/>
   <label class="item1" for="item1" style="background-image:url(https://picsum.photos/750/750?image=501);"></label>
   <input id="item2" type="checkbox"/>
@@ -133,8 +137,4 @@ body-gallery .container input:checked + [class*=item] {
   <input id="item9" type="checkbox"/>
   <label class="item9" for="item9" style="background-image:url(https://picsum.photos/750/750?image=509);"></label>
 </div>
-
-
-
-
 </div>
