@@ -146,7 +146,7 @@
                       <div v-else-if="bmi <= 18.5">
                         Your body is vey low on weight. Your body is
                         <span class="red">undernutritioned</span> your
-                        body requires nourishment and nutrition.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight.</strong>
+                        body requires nourishment and nutrition.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
                       </div>
                       <div v-else-if="bmi <= 24">
                         Your body has
@@ -154,25 +154,25 @@
                       </div>
                       <div v-else-if="bmi <= 30">
                         Your body is Over Weight which is the starting
-                        phase of the <span class="o">obese</span>.<br> <strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain your current weight.</strong>
+                        phase of the <span class="o">obese</span>.<br> <strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain your current weight based on your daily activity.</strong>
                       </div>
                       <div v-else-if="bmi <= 35">
                         Your body is Over weight
                         <span class="o">obese stage 1</span>,
                         <span class="red"> precautions</span> need to be
-                        taken.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight.</strong>
+                        taken.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
                       </div>
                       <div v-else-if="bmi <= 40">
                         Your body is Over weight
                         <span class="o">obese stage 2</span>, your body
-                        requires <span class="red"> help</span>.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight.</strong>
+                        requires <span class="red"> help</span>.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
                       </div>
                       <div v-else>
                         your body is Over weight
                         <span class="o">obese stage 3</span>,
                         <span class="red">
                           critically in a danger zone</span
-                        >. Health risks will increase.<br> <strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight.</strong>
+                        >. Health risks will increase.<br> <strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
                       </div>
                     </span>
                 </p>

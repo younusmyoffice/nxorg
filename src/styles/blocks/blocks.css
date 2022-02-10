@@ -1316,6 +1316,9 @@ header + header {
   background-color: #f4fef5;
   color: #444444; }
 
+.bg-green {
+  background-color: #06a916;
+  color: #ffffff; }
 
 
   /* custom blocks */
