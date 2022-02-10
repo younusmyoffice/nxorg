@@ -256,20 +256,12 @@ export default {
 </script>
 <style scoped>
 
-/* @import "../styles/blocks/blocks.css";
-@import "../styles/blocks/bootstrap.min.css"; */
+@import "../styles/blocks/blocks.css";
+@import "../styles/blocks/bootstrap.min.css";
 
 
 
-.slidez{
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/S1.png."); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  /* display:inline-block; */
-  /* height: 50%; */
-}
+ 
 
 .fade-enter-active,
 .fade-leave-active {
@@ -348,37 +340,7 @@ width:100%; */
   text-align: center;
   color: rgb(54, 54, 54);
 }
-
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-.centeredt {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+ 
 /* .centeredp {
   position: absolute;
   top: 200px;
