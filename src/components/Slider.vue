@@ -1,7 +1,7 @@
 <template > 
   <div id="Slider"  v-for="i in [currentIndex]" :key="i">
       
-<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.im})`, width:'100%',  height:'600px'  }">
+<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.im})`, width:'100%',  height:'570px'  }">
   <div class="container " > 
 
       <transition-group name="fade" tag="div">
@@ -90,11 +90,23 @@
 
 <!-- block1 -->
 
-                <div class="   c-text-pos  ">
+                <!-- <div class="   c-text-pos  ">
                     <div class=" ">
                       <h1 class="display-5 fw-bold lh-1 mb-3" >{{currentImg.ctitle}}</h1>
                       <p class="lead"><em>{{currentImg.ctext}}</em></p>
-                      <!-- <img alt="image" width="460px" height="460px" class="img-fluid slide-img" :src="currentImg.mm" > -->
+                     
+                    </div>
+                </div>  -->
+
+                <div class="row    ">
+                    <div class="  c-text-pos">
+                      <h1 class="display-5 fw-bold lh-1 mb-3" >{{currentImg.ctitle}}</h1>
+                      <p class="lead"><em>{{currentImg.ctext}}</em></p>
+                      
+                      
+                    </div>
+                    <div class=" col-9 c-img-pos ">
+                        <img   alt="image" width="100%" height="460px" class="" :src="currentImg.mm" >
                     </div>
                 </div> 
 
@@ -108,7 +120,7 @@
                     <p class="lead mb-5">{{currentImg.text}}</p>
                   </div>
               
-                  <div class="col-12 col-md-8 m-auto ml-lg-auto mr-lg-0 col-lg-6 pt-5 pt-lg-0">
+                  <div class="col-7 col-md-8 m-auto ml-lg-auto mr-lg-0 col-lg-6 pt-5 pt-lg-0">
                     <img alt="image" width="60px" height="60px" class="img-fluid slide-img" :src="currentImg.hm" >
                   </div>
 
@@ -210,7 +222,8 @@ export default {
       list: [
         {title:"Nutrition for healthy life", ctitle:"", text:"Be a part of an exciting journey of helping stay healthy and grow wealthy", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero1.svg", mm:"./images/slideempty.png"},
         {title:"Your Health And Business Success is Our Goal,",ctitle:"", text:"Nextage Organics Invites You To An Incredible Healthy And Business Journey. ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero2.png " , mm:"./images/slideempty.png"},
-        {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/slideempty.png", mm:"./images/slideempty.png"}
+        // {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/slideempty.png", mm:"./images/slideempty.png"},
+        {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/nx_main3.jpg", hm:"./images/slideempty.png", mm:"./images/slide3new2.png"}
       ],
 
     // list1: [
@@ -367,6 +380,21 @@ width:100%; */
   /* left: 50%; */
   /* transform: translateY(-50%); */
   transform: translate(-50%, -50%);
+}
+
+.c-img-pos{
+  /* font-size:5vw; */
+  position: absolute;
+  align-content: center;
+  /* text-align: center; */
+  /* height:auto;
+  width: 100%; */
+  top:  30%;
+  bottom: auto;
+  left: 50%;
+  /* left: 50%; */
+  transform: translateX(-50%);
+  /* transform: translate(-50%, -50%); */
 }
 </style>
  
