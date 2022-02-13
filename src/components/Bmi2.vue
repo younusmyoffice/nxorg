@@ -19,14 +19,161 @@
       <div class="container bg-r">
         <div class="row-50"></div>
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-5">
+          <div class="col-12 col-md-6 ml-auto">
+            <form @submit.prevent="calculate">
+              <div class="row-50"></div>
+              <h2>Enter Details here</h2>
+              <div class="row-52"></div>
+              <div
+                class="static"
+                v-bind:class="{ active: isActive, 'text-danger': hasError }"
+              >
+                {{ err }}
+              </div>
+
+              <div class="row mt-4">
+                <div class="col">
+                  <input style="  border-width: 2px; border-color:  ; border-radius: 5px; "
+                    v-model.number="height"
+                    step="0.01"
+                    placeholder="Height in feet"
+                    id="heightInFeet"
+                    class="form-control"
+                    type="number"
+                    required
+                  />
+                  <p class="u i"></p>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col">
+                  <input style="  border-width: 2px; border-color: ; border-radius: 5px; "
+                    v-model.number="weight"
+                    step="0.01"
+                    placeholder="Weight in Kgs"
+                    id="weight"
+                    class="form-control"
+                    type="number"
+                    required
+                  />
+                  <p class="u i"></p>
+                </div>
+              </div>
+              <div class="row mt-4" >
+                <div class="col">
+                  <input style="  border-width: 2px; border-color: ; border-radius: 5px; "
+                    v-model.number="age"
+                    placeholder="Age"
+                    id="age"
+                    class="form-control"
+                    type="number"
+                    required
+                  />
+                  <p class="u i"></p>
+                </div>
+              </div>
+
+              <div class="row mt-4">
+                <div class="col">
+                  <!-- <input
+                    v-model.number="age"
+                    placeholder="Age"
+                    id="age"
+                    class="form-control"
+                    type="number"
+                    required
+                  /> -->
+                  <!-- <p class="u i"></p> -->
+                  <!-- <div class="row mt-4">
+                  <label for="cars">Choose Your Daily Activity</label> -->
+                  <select v-model="act"  id="act" class="form-control" 
+                    style="  border-width: 2px; border-color: ; border-radius: 5px;  " required>  
+                    <option value=""   disabled selected hidden >Daily Activity</option>
+                    <option value="0" id="0">Basal Metabolic Rate (BMR)</option>
+                    <option value="1" id="1">Little/No exercise</option>
+                    <option value="2" id="2">Low activity (exercise 1-3 times/week)</option>
+                    <option value="3" id="3">Active (daily exercise or intense exercise 3-4 times/week)</option>
+                    <option value="4" id="4">High activity (intense exercise 6-7 times/week)</option>
+                    <option value="5" id="5">Very high activity (very intense exercise daily, or physical job)</option>
+                  </select>
+                  <!-- </div> -->
+
+
+                </div>
+              </div>
+
+              <div class="row mt-4 text-center justify-content-center">
+                <!-- <h1>Choose gender</h1> -->
+                <div class="col">
+                  <div class="form-check">
+                    <input
+                      placeholder="female"
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      v-model="gender"
+                      value="female"
+                      required
+                      checked
+                    />
+                    <label class="form-check-label" for="female">
+                      Female
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="form-check">
+                    <input
+                      placeholder="male"
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      v-model="gender"
+                      value="male"
+                      required
+                    />
+                    <label class="form-check-label" for="male"> Male </label>
+                  </div>
+                </div>
+              </div>
+              <!-- bmi error output -->
+
+              <div class="row mt-4 text-center justify-content-center">
+                <div class="col">
+                  <button
+                    type="submit"
+                    @click="calculate()"
+                    class="btn btn-primary submitButton button"
+                    value="Measure"
+                  >
+                    calculate
+                  </button>
+                </div>
+              </div>
+              <div class="row-50"></div>
+
+             
+            </form>
+          </div>
+
+           <!-- bmi output -->
+
+
+
+
+
+          <div class="col-12 col-md-6 col-lg-5 justify-content-center">
             <div class="row-50"></div>
             <h2>Your Fitness Result</h2>
             <!-- <p class="text-large">Support, Sales, and Account Management services are currently available in English</p> -->
             <!-- bmi code -->
-            <div class="row mt-4">
+            <div class="row mt-4  ">
               <div class="col">
-                <table class="styled-table resultContainer">
+                <table class="styled-table ">
                   <thead>
                     <tr>
                       <th>Particulars</th>
@@ -181,146 +328,7 @@
           </div>
           
 
-          <div class="col-12 col-md-6 ml-auto">
-            <form @submit.prevent="calculate">
-              <div class="row-50"></div>
-              <h2>Enter Details here</h2>
-              <div class="row-52"></div>
-              <div
-                class="static"
-                v-bind:class="{ active: isActive, 'text-danger': hasError }"
-              >
-                {{ err }}
-              </div>
-
-              <div class="row mt-4">
-                <div class="col">
-                  <input style="  border-width: 2px; border-color: #71bf44; border-radius: 5px; "
-                    v-model.number="height"
-                    step="0.01"
-                    placeholder="Height in feet"
-                    id="heightInFeet"
-                    class="form-control"
-                    type="number"
-                    required
-                  />
-                  <p class="u i"></p>
-                </div>
-              </div>
-
-              <div class="row mt-4">
-                <div class="col">
-                  <input style="  border-width: 2px; border-color: #71bf44; border-radius: 5px; "
-                    v-model.number="weight"
-                    step="0.01"
-                    placeholder="Weight in Kgs"
-                    id="weight"
-                    class="form-control"
-                    type="number"
-                    required
-                  />
-                  <p class="u i"></p>
-                </div>
-              </div>
-              <div class="row mt-4" >
-                <div class="col">
-                  <input style="  border-width: 2px; border-color: #71bf44; border-radius: 5px; "
-                    v-model.number="age"
-                    placeholder="Age"
-                    id="age"
-                    class="form-control"
-                    type="number"
-                    required
-                  />
-                  <p class="u i"></p>
-                </div>
-              </div>
-
-              <div class="row mt-4">
-                <div class="col">
-                  <!-- <input
-                    v-model.number="age"
-                    placeholder="Age"
-                    id="age"
-                    class="form-control"
-                    type="number"
-                    required
-                  /> -->
-                  <!-- <p class="u i"></p> -->
-                  <!-- <div class="row mt-4">
-                  <label for="cars">Choose Your Daily Activity</label> -->
-                  <select v-model="act"  id="act" class="form-control" 
-                    style="  border-width: 2px; border-color: #71bf44; border-radius: 5px;  " required>  
-                    <option value=""   disabled selected hidden >Daily Activity</option>
-                    <option value="0" id="0">Basal Metabolic Rate (BMR)</option>
-                    <option value="1" id="1">Little/No exercise</option>
-                    <option value="2" id="2">Low activity (exercise 1-3 times/week)</option>
-                    <option value="3" id="3">Active (daily exercise or intense exercise 3-4 times/week)</option>
-                    <option value="4" id="4">High activity (intense exercise 6-7 times/week)</option>
-                    <option value="5" id="5">Very high activity (very intense exercise daily, or physical job)</option>
-                  </select>
-                  <!-- </div> -->
-
-
-                </div>
-              </div>
-
-              <div class="row mt-4 text-center justify-content-center">
-                <!-- <h1>Choose gender</h1> -->
-                <div class="col">
-                  <div class="form-check">
-                    <input
-                      placeholder="female"
-                      class="form-check-input"
-                      type="radio"
-                      name="gender"
-                      id="female"
-                      v-model="gender"
-                      value="female"
-                      required
-                      checked
-                    />
-                    <label class="form-check-label" for="female">
-                      Female
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="form-check">
-                    <input
-                      placeholder="male"
-                      class="form-check-input"
-                      type="radio"
-                      name="gender"
-                      id="male"
-                      v-model="gender"
-                      value="male"
-                      required
-                    />
-                    <label class="form-check-label" for="male"> Male </label>
-                  </div>
-                </div>
-              </div>
-              <!-- bmi error output -->
-
-              <div class="row mt-4 text-center justify-content-center">
-                <div class="col">
-                  <button
-                    type="submit"
-                    @click="calculate()"
-                    class="btn btn-primary submitButton button"
-                    value="Measure"
-                  >
-                    calculate
-                  </button>
-                </div>
-              </div>
-              <div class="row-50"></div>
-
-              <!-- bmi output -->
-            </form>
-          </div>
+          
         </div>
       </div>
 
@@ -493,7 +501,7 @@ export default {
   margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 500px;
+  min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   border-radius: 1em;
 }
