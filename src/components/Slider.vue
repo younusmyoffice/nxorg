@@ -1,7 +1,7 @@
 <template > 
   <div id="Slider"  v-for="i in [currentIndex]" :key="i">
       
-<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.im})`, width:'100%',  height:'570px'  }">
+<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.im})`, width:'100%',  height:'670px'  }">
   <div class="container " > 
 
       <transition-group name="fade" tag="div">
@@ -99,12 +99,12 @@
                 </div>  -->
 
                 <div class="row    ">
-                    <div class="  c-text-pos">
+                    <div class="col-12  c-text-pos">
                       <h1 class="display-5 fw-bold lh-1 mb-3" >{{currentImg.ctitle}}</h1>
                       <p class="lead"><em>{{currentImg.ctext}}</em></p>
-                      
-                      
                     </div>
+                    <div class="row-51"></div>
+
                     <div class=" col-9 c-img-pos ">
                         <img   alt="image" width="100%" height="460px" class="" :src="currentImg.mm" >
                     </div>
@@ -395,6 +395,16 @@ width:100%; */
   /* left: 50%; */
   transform: translateX(-50%);
   /* transform: translate(-50%, -50%); */
+}
+
+
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .c-img-pos, .c-text-pos {
+    width: 100%;
+  }
 }
 </style>
  
