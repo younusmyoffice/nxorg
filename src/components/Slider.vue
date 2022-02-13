@@ -1,7 +1,7 @@
 <template > 
   <div id="Slider"  v-for="i in [currentIndex]" :key="i">
       
-<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.im})`, width:'100%',  height:'670px'  }">
+<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.imm})`, width:'100%',  height:'670px'  }">
   <div class="container " > 
 
       <transition-group name="fade" tag="div">
@@ -220,7 +220,7 @@ export default {
   data() {
     return {
       list: [
-        {title:"Your Health and Fitness is our Goal", ctitle:"", text:"Be a part of an exciting journey to stay healthy  ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero1.svg", mm:"./images/slideempty.png"},
+        {title:"Your Health and Fitness is our Goal", ctitle:"", text:"Be a part of an exciting journey to stay healthy  ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero1.png", mm:"./images/slideempty.png"},
         {title:" Health is Wealth ",ctitle:"", text:"Nextage Organics Invites Healthcare and Fitness Professionals to an Incredible Health Management Journey.  ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero2.png " , mm:"./images/slideempty.png"},
         // {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/slideempty.png", mm:"./images/slideempty.png"},
         {title:"",ctitle:"HERBOVATION - Nutrition for healthy life", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/nx_main3.jpg", hm:"./images/slideempty.png", mm:"./images/slide3new2.png"}
@@ -374,7 +374,7 @@ width:100%; */
   position: absolute;
   align-content: center;
   text-align: center;
-  top:  25%;
+  top:  27%;
   bottom: auto;
   left: 50%;
   /* left: 50%; */

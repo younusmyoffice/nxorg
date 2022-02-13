@@ -11,7 +11,7 @@
         <div class="row text-center justify-content-center">
           <div class="col-8">
             <h1><strong>Free fitness check for you</strong></h1>
-            <p>Know your nutritional status</p>
+            <!-- <p>Know your nutritional status</p> -->
           </div>
         </div>
       </div>
@@ -502,7 +502,7 @@ export default {
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 1em;
 }
 
