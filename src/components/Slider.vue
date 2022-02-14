@@ -1,7 +1,7 @@
 <template > 
   <div id="Slider"  v-for="i in [currentIndex]" :key="i">
       
-<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.imm})`, width:'100%',  height:'670px'  }">
+<section class="nxo-block slide-bg-img p-0 " :style="{backgroundImage:`url(${currentImg.im})`, width:'100%',  height:'670px'  }">
   <div class="container " > 
 
       <transition-group name="fade" tag="div">
@@ -106,7 +106,7 @@
                     <div class="row-51"></div>
 
                     <div class=" col-9 c-img-pos ">
-                        <img   alt="image" width="100%" height="460px" class="" :src="currentImg.mm" >
+                        <img alt="image" width="100%" height="460px" class="" :src="currentImg.mm" >
                     </div>
                 </div> 
 
@@ -220,10 +220,10 @@ export default {
   data() {
     return {
       list: [
-        {title:"Your Health and Fitness is our Goal", ctitle:"", text:"Be a part of an exciting journey to stay healthy  ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero1.png", mm:"./images/slideempty.png"},
-        {title:" Health is Wealth ",ctitle:"", text:"Nextage Organics Invites Healthcare and Fitness Professionals to an Incredible Health Management Journey.  ", ctext:"",  im:"./images/nx_main3.jpg", hm:"./images/hero/hero2.png " , mm:"./images/slideempty.png"},
+        {title:"Your Health and Fitness is our Goal", ctitle:"", text:"Be a part of an exciting journey to stay healthy  ", ctext:"",  im:"./images/nx_main10.jpg", hm:"./images/hero/hero1.png", mm:"./images/slideempty.png"},
+        {title:" Health is Wealth ",ctitle:"", text:"Nextage Organics Invites Healthcare and Fitness Professionals to an Incredible Health Management Journey.  ", ctext:"",  im:"./images/nx_main10.jpg", hm:"./images/hero/hero2.png " , mm:"./images/slideempty.png"},
         // {title:"",ctitle:"HERBOVATION", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/slide3new1.png", hm:"./images/slideempty.png", mm:"./images/slideempty.png"},
-        {title:"",ctitle:"HERBOVATION - Nutrition for healthy life", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/nx_main3.jpg", hm:"./images/slideempty.png", mm:"./images/slide3new2.png"}
+        {title:"",ctitle:"HERBOVATION - Nutrition for healthy life", text:"", ctext:"A New Direction to Great Nutrition",  im:"./images/nx_main10.jpg", hm:"./images/slideempty.png", mm:"./images/slide3new2.png"}
       ],
 
     // list1: [
@@ -389,7 +389,7 @@ width:100%; */
   /* text-align: center; */
   /* height:auto;
   width: 100%; */
-  top:  30%;
+  top:  40%;
   bottom: auto;
   left: 50%;
   /* left: 50%; */
@@ -402,8 +402,33 @@ width:100%; */
 
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
-  .c-img-pos, .c-text-pos {
+   .c-text-pos {
     width: 100%;
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    top:  27%;
+    bottom: auto;
+    /* left: 50%; */
+    /* left: 50%; */
+    /* transform: translateY(-50%); */
+    /* transform: translate(-50%, -50%); */
+    transform: translateX(-50%);
+
+  }
+  .c-img-pos{
+    position: absolute;
+    align-content: center;
+    width:100%;
+    /* text-align: center; */
+    /* height:auto;
+    width: 100%; */
+    top:  60%;
+    bottom: auto;
+    /* left: 50%; */
+    /* left: 50%; */
+    transform: translateX(-50%);
+
   }
 }
 </style>

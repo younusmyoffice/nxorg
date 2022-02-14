@@ -167,13 +167,16 @@
 	top: -0.5em;
 	}
 	a {
-	color: #30ab16;
+	/* color: #0056b3; */
+	/* color: #30ab16; */
 	text-decoration: none;
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
 	}
 	a:hover {
-	color: #0056b3;
+	color: #ffffff;
+	/* color: #0056b3; */
+	/* color: #30ab16; */
 	/* text-decoration: underline; */
 	}
 	a:not([href]):not([tabindex]) {
@@ -2272,7 +2275,7 @@
 	}
 	.btn-primary:hover {
 	color: #fff;
-	background-color: #0069d9;
+	/* background-color: #0069d9; */
 	border-color: #0062cc;
 	}
 	.btn-primary.focus,
@@ -8416,4 +8419,10 @@
 	  top: 8px;
 	  left: 16px;
 
+	}
+
+	.link-blue {
+	/* background-color: #002e9b; */
+	color: rgb(0, 195, 255);
+	text-decoration : none;
 	}

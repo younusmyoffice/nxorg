@@ -1365,6 +1365,7 @@ header + header {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizelegibility;
     padding: 7.5rem 0;
+    /* padding: 3.5rem 0; */
     position: relative;
     background-size: cover;
     background-position: center;
@@ -1613,3 +1614,9 @@ header + header {
           color: #71bf44;
 
       }
+
+.link-blue {
+  background-color: #00ccff;
+  color: rgb(0, 195, 255);
+  text-decoration : none;
+}

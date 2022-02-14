@@ -1,7 +1,7 @@
 <template>
   <section
     id="Bmibmrcal"
-    class="nxo-block   "
+    class="nxo-block  pt-5 pb-5 "
     style="background-color: #f4fef5;"
   >
     <div class="bg-gray">
@@ -19,7 +19,7 @@
       <div class="container bg-r">
         <div class="row-50"></div>
         <div class="row">
-          <div class="col-12 col-md-6 ml-auto">
+          <div class="col-12 col-md-6 ml-auto mr-auto">
             <form @submit.prevent="calculate">
               <div class="row-50"></div>
               <h2>Enter Details here</h2>
@@ -33,7 +33,7 @@
 
               <div class="row mt-4">
                 <div class="col">
-                  <input style="  border-width: 2px; border-color:  ; border-radius: 5px; "
+                  <input style="  border-width: 1px; border-color:  ; border-radius: 5px; "
                     v-model.number="height"
                     step="0.01"
                     placeholder="Height in feet"
@@ -48,7 +48,7 @@
 
               <div class="row mt-4">
                 <div class="col">
-                  <input style="  border-width: 2px; border-color: ; border-radius: 5px; "
+                  <input style="  border-width: 1px; border-color: ; border-radius: 5px; "
                     v-model.number="weight"
                     step="0.01"
                     placeholder="Weight in Kgs"
@@ -62,7 +62,7 @@
               </div>
               <div class="row mt-4" >
                 <div class="col">
-                  <input style="  border-width: 2px; border-color: ; border-radius: 5px; "
+                  <input style="  border-width: 1px; border-color: ; border-radius: 5px; "
                     v-model.number="age"
                     placeholder="Age"
                     id="age"
@@ -88,7 +88,7 @@
                   <!-- <div class="row mt-4">
                   <label for="cars">Choose Your Daily Activity</label> -->
                   <select v-model="act"  id="act" class="form-control" 
-                    style="  border-width: 2px; border-color: ; border-radius: 5px;  " required>  
+                    style="  border-width: 1px; border-color: ; border-radius: 5px;  " required>  
                     <option value=""   disabled selected hidden >Daily Activity</option>
                     <option value="0" id="0">Basal Metabolic Rate (BMR)</option>
                     <option value="1" id="1">Little/No exercise</option>
@@ -166,7 +166,7 @@
 
 
 
-          <div class="col-12 col-md-6 col-lg-5 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-5 justify-content-center ml-auto mr-auto">
             <div class="row-50"></div>
             <h2>Your Fitness Result</h2>
             <!-- <p class="text-large">Support, Sales, and Account Management services are currently available in English</p> -->
@@ -253,10 +253,16 @@
                               class="text-center row justify-content-center"
                             >
                               <div class="b" v-if="bmi <= 0"></div>
-                              <div class="b" v-else-if="bmi <= 18.5">
+                              <div class="b" v-else-if="bmi <= 16">
+                                extremely low body weight
+                              </div>
+                              <div class="b" v-else-if="bmi <= 17">
                                 Very low body weight
                               </div>
-                              <div class="g" v-else-if="bmi <= 24">
+                              <div class="b" v-else-if="bmi <= 18.5">
+                                 low body weight
+                              </div>
+                              <div class="g" v-else-if="bmi <= 25">
                                 Healthy Weight
                               </div>
                               <div class="o" v-else-if="bmi <= 30">
@@ -290,14 +296,26 @@
                 <p>
                   <span class="text-center row justify-content-center">
                       <div v-if="bmi <= 0"></div>
-                      <div v-else-if="bmi <= 18.5">
+                      <div v-else-if="bmi <= 16">
+                        Your body is exteremly low on weight. Your body is
+                        <span class="red">undernutritioned</span> your
+                        body requires nourishment and nutrition.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
+                      </div>
+                      <div v-else-if="bmi <= 17">
                         Your body is vey low on weight. Your body is
                         <span class="red">undernutritioned</span> your
                         body requires nourishment and nutrition.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
                       </div>
-                      <div v-else-if="bmi <= 24">
+                      <div v-else-if="bmi <= 18.5">
+                        Your body is low on weight. Your body is
+                        <span class="red">undernutritioned</span> your
+                        body requires nourishment and nutrition.<br><strong>This means that you need rouhgly <span class="red">{{bmr}}</span> calories a day to maintain healthy weight based on your daily activity.</strong>
+                      </div>
+                      <div v-else-if="bmi <= 25">
                         Your body has
                         <span class="g">Healthy Weight</span>
+                        To maintain the same <br><strong> you body needs rouhgly  <span class="red">{{bmr}}</span>  for   healthy weight based on your daily activity.</strong>
+                      
                       </div>
                       <div v-else-if="bmi <= 30">
                         Your body is Over Weight which is the starting
@@ -546,5 +564,14 @@ export default {
 }
 .b {
   color: #2600ff;
+}
+
+
+
+
+@media screen and (min-width: 993px) {
+ .styled-table {
+   width: 100%;
+ }
 }
 </style>

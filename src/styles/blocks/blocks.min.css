@@ -1538,3 +1538,8 @@ header + header {
   background-color: #f4f7fe;
   color: #444;
 }
+.link-blue {
+  /* background-color: #f4f7fe; */
+  color: rgb(0, 195, 255);
+  text-decoration : none;
+}
