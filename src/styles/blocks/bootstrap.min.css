@@ -168,13 +168,13 @@
 	}
 	a {
 	/* color: #0056b3; */
-	/* color: #30ab16; */
+	color: #30ab16;
 	text-decoration: none;
 	background-color: transparent;
 	-webkit-text-decoration-skip: objects;
 	}
 	a:hover {
-	color: #ffffff;
+	color: #f8f8f8;
 	/* color: #0056b3; */
 	/* color: #30ab16; */
 	/* text-decoration: underline; */
