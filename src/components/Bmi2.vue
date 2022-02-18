@@ -6,7 +6,7 @@
   >
     <div class="bg-gray">
       <div class="container">
-        <div class="row-50"></div>
+        <div class="row-52"></div>
 
         <div class="row text-center justify-content-center">
           <div class="col-8">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="container bg-r">
-        <div class="row-50"></div>
+        <div class="row-52"></div>
         <div class="row">
           <div class="col-12 col-md-6 ml-auto mr-auto">
             <form @submit.prevent="calculate">
